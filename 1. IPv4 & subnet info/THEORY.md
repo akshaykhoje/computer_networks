@@ -1,7 +1,6 @@
 ## Calculate the IP address subnet information(Network, broadcast, first IP, last IP) for class C subnets
 
 
-'''
 Each block in an IPv4 address is 8 bits. There are 4 blocks in an IPv4 address. Thus an IPv4 address is 32 bits(4 bytes) where each block is an octet.
 Suppose IP address is 168.210.255.206, it's binary equivalent is 10101000.11010010.11100001.11001110
 i.e. 168=128+32+8
@@ -57,5 +56,3 @@ Class E :
           Experimental and anything over 240.0.0.0
 ```       
 Classfull IP address haven't been used since they were replaced by CIDR in 1993.
-
-'''
