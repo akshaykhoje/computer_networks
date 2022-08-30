@@ -97,7 +97,7 @@ NOTE THAT THE IP USED HERE IS A "CLASS A" IP ADDRESS.
 000001011.00000001.00000001.00010101 = 11.1.1.21
 11111111.11111111.11111111.00000000 = 255.255.255.0
 ```
-<<<<<<< HEAD
+
 
 ### Questions
 ```
@@ -108,15 +108,11 @@ You have been allocated a class A network address of 21.0.0.0. You need create a
 Yes you only need 8 bits for 100 hosts and both subnet masks would give you that.
 A subnet mask of 255.255.255.0 would give you lots of networks (2 16) and 254 hosts.
 A subnet of 255.255.0.0 would give you lots of hosts (approx 216) and 256 networks.
-=======
+
 CIDR notation is the IP address/<no. of 1s in the mask>
->>>>>>> e4deb9eca46f2271101801fc45d41aab72a30c1b
+
 
 
 
 Subnets simplified : http://www.steves-internet-guide.com/subnetting-subnet-masks-explained/
-<<<<<<< HEAD
-=======
 
-
->>>>>>> e4deb9eca46f2271101801fc45d41aab72a30c1b
