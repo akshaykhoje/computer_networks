@@ -97,10 +97,10 @@ NOTE THAT THE IP USED HERE IS A "CLASS A" IP ADDRESS.
 000001011.00000001.00000001.00010101 = 11.1.1.21
 11111111.11111111.11111111.00000000 = 255.255.255.0
 ```
-Do the logical AND
+CIDR notation is the IP address/<no. of 1s in the mask>
 
 
 
 Subnets simplified : http://www.steves-internet-guide.com/subnetting-subnet-masks-explained/
-=======
->>>>>>> 3391ff24723c2d75ab087af2ad8b5ac941597704
+
+
