@@ -66,9 +66,9 @@ Classfull IP address haven't been used since they were replaced by CIDR in 1993.
 
 In short
 ```
-Class A    0-127        network,node,node,node
-Class B    128-191      network,network,node,node
-Class C    192-223      network,network,network,node
+Class A    0-127        network,node,node,node          Net.node.node.node         "8 bits used for the network"
+Class B    128-191      network,network,node,node       Net.subnet.node.node      "16 bits used for the network"
+Class C    192-223      network,network,network,node    Net.subnet.subnet.node    "24 bits used for the network"
 ```
 
 
@@ -97,10 +97,17 @@ NOTE THAT THE IP USED HERE IS A "CLASS A" IP ADDRESS.
 000001011.00000001.00000001.00010101 = 11.1.1.21
 11111111.11111111.11111111.00000000 = 255.255.255.0
 ```
-Do the logical AND
+
+### Questions
+```
+You have been allocated a class A network address of 21.0.0.0. You need create at least 10 networks and each network will support a maximum of 100 hosts. Would the following two subnet masks Work.
+
+255.255.0.0 and or 255.255.255.0
+```
+Yes you only need 8 bits for 100 hosts and both subnet masks would give you that.
+A subnet mask of 255.255.255.0 would give you lots of networks (2 16) and 254 hosts.
+A subnet of 255.255.0.0 would give you lots of hosts (approx 216) and 256 networks.
 
 
 
 Subnets simplified : http://www.steves-internet-guide.com/subnetting-subnet-masks-explained/
-=======
->>>>>>> 3391ff24723c2d75ab087af2ad8b5ac941597704

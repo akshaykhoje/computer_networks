@@ -1,3 +1,14 @@
+'''
+To add the following functionalities yet:
+- Maximum number of subnets
+- IP Class : A, B or C
+- Usable hosts (starting and ending IPs)
+- Total no. of hosts = 256
+- Total no. of available hosts = 254
+- Binary subnet mask
+- CIDR Notation : /24, /21, etc
+'''
+
 from functools import total_ordering
 from netaddr import *
 import ipaddress
@@ -35,6 +46,15 @@ def hosts(str):
   lis = list(ipaddress.ip_network(str).hosts())
   total_count = len(lis)
   return total_count
+
+def print_table(str, user_ip, subnet, net_id, broadcast_add, host_count):
+  '''prints the data in tabulated format'''
+  data = {
+    'Attribute':['IP-subnet', 'IP-address', 'subnet-mask', 'Network', 'Broadcast', 'Available hosts'],
+    'Value':[str, user_ip, subnet, net_id, broadcast_add, host_count]
+    }
+  df = pandas.DataFrame(data)
+  print(tabulate(df, headers='keys', tablefmt='fancy_grid'))
   
 user_ip=ip_address(user)
 
@@ -46,10 +66,6 @@ broadcast_add = broadcast(user)
 
 host_count = hosts(str)
 
-data = {
-    'Attribute':['IP-subnet', 'IP-address', 'subnet-mask', 'Network', 'Broadcast', 'Available hosts'],
-    'Value':[str, user_ip, subnet, net_id, broadcast_add, host_count]
-    }
-df = pandas.DataFrame(data)
-print(tabulate(df, headers='keys', tablefmt='fancy_grid'))
 
+# print the table
+print_table(str, user_ip, subnet, net_id, broadcast_add, host_count)
