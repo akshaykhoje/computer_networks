@@ -92,17 +92,24 @@ def IPClass(str):
         return "E"
 
 
-def print_table(string, user_ip, mask, bin_mask, net_id, broadcast_add, total_hosts, av_hosts, f_host, l_host, cidr, ip_class):
+def print_table(string, user_ip, mask, bin_mask, max_nets, net_id, broadcast_add, total_hosts, av_hosts, f_host, l_host, cidr, ip_class):
     '''prints the data in tabulated format'''
 
     data = {
-        'Attribute': ['IP-subnet', 'IP-address', 'subnet-mask', 'Binary subnet mask', 'Network', 'Broadcast', 'Total hosts', 'Available hosts', 'First host', 'Last host', 'CIDR Notation', 'IP Class'],
-        'Value': [string, user_ip, mask, bin_mask, net_id, broadcast_add, total_hosts, av_hosts, f_host, l_host, cidr, ip_class]
+        'Attribute': ['IP-subnet', 'IP-address', 'subnet-mask', 'Binary subnet mask', 'Maximum Subnets','Network', 'Broadcast', 'Total hosts', 'Available hosts', 'First host', 'Last host', 'CIDR Notation', 'IP Class'],
+        'Value': [string, user_ip, mask, bin_mask, max_nets, net_id, broadcast_add, total_hosts, av_hosts, f_host, l_host, cidr, ip_class]
     }
 
     df = pandas.DataFrame(data)
     print(tabulate(df, headers='keys', tablefmt='fancy_grid'))
+    
 
+def max_subnets(x):
+    '''returns the maximum number of subnets possible on the network'''
+    x = int(x)
+    count = 2**(x-8)
+    return count
+    
 
 user_ip = IP(ifc)
 
@@ -120,7 +127,9 @@ ip_class = IPClass(str)
 
 bin_mask = binary(mask)
 
+max_nets = max_subnets(cidr_notation[1:])
+
 
 # print the table
-print_table(str, user_ip, mask, bin_mask, net_id, broadcast_add,
+print_table(str, user_ip, mask, bin_mask, max_nets, net_id, broadcast_add,
             total_hosts, av_hosts, f_host, l_host, cidr_notation, ip_class)
