@@ -1,0 +1,30 @@
+Traceroute is a tool in Linux that allows you to investigate the routes of network packets. It can help you in identifying the limiting factor of network packet journeys. Traceroute is also useful for troubleshooting sluggish network connections.
+
+Q.) HOW IT WORKS?
+  Traceroute works by sending packets of data to the target computer, server or website and recording any intermediate steps through which the packets travel.
+
+OUTPUT of a traceroute command will be the IP addresses and domain names through which the packets pass.
+
+NOTE:
+  While using traceroute, some devices may not interact well. This could be due to routers being bugged, ISPs rate-limiting ICMP messages, devices configured not to send ICMP packets (to prevent distributed DoS attacks), etc. Some networks are also configured to block traceroute requests.
+
+SYNTAX:
+traceroute {<website> | <IP address>}
+
+Use IPv6
+traceroute -6 {<website> | <IP address>}
+
+1) TESTING PORTS:
+If there is a need to test a specific port, the port can be specified using the “-p” flag. For UDP tracing, traceroute will start with the given value and increase with each probe. For ICMP tracing, the value will determine the initial ICMP sequence value. For TCP and others, this will be the constant destination port to connect.
+
+traceroute -p <port> <IP address>
+traceroute -p 80 192.168.0.1
+
+2) TIMEOUT LIMIT:
+traceroute -w 6.0 linuxhint.com    ; a timeout of 6 seconds
+
+3) Use TCP SYN for probing:
+sudo traceroute -T <IP address | website>
+
+4) Routing packets through a gateway:
+traceroute -I -g 192.168.0.1 <IP address | website>

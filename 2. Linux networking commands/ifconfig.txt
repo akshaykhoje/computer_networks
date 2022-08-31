@@ -1,0 +1,52 @@
+ifconfig stands for "interface configuration." It is used to view and change the configuration of the network interfaces on your system.
+
+Syntax:
+ifconfig [-a] [-v] [-s] <interface> [[<AF>] <address>]
+
+It displays the information about all network interfaces currently in operation.
+Here, enp2s0, lo and wlp3s0 are the active network interfaces.
+
+enp2s0 -> It is the first ethernet interface. Additional ethernet interfaces would be named enp2s1, enp2s2, etc.
+lo     -> It is the loopback interface. This is a special network interface that the system uses to communicate with itself.
+wlp3s0 -> It is the name of the first wireless network on the system. Additional wireless interfaces would be named wlp3s1, wlp3s2, etc.
+
+COMMANDS:
+
+1) ifconfig -a 
+This produces output similar to running ifconfig, but if there are any inactive interfaces on the system, their configuration is also shown.
+
+2) Enabling and disabling an interface
+sudo ifconfig enp2s0 up   (activate)
+sudo ifconfig enp2s0 down (deactivate)
+
+3) Configure an interface
+'''Assign a static IP address to an interface'''
+sudo ifconfig [interface] [IP]
+e.g.
+sudo ifconfig wlp3s0 69.72.169.1
+
+4) Assign a network mask to an interface 
+sudo ifconfig [interface] netmask [mask]
+e.g. 
+sudo ifconfig enp2s0 netmask 255.255.255.0
+
+5) Assign a broadcast address to an interface 
+sudo ifconfig [interface] broadcast [address]
+e.g. 
+sudo ifconfig enp2s0 broadcast 172.16.25.98
+
+6) Combine the above commands into one :
+sudo ifconfig enp2s0 192.168.2.5 netmask 255.255.255.0 broadcast 192.168.2.7
+
+
+ifconfig is used to configure the system's kernel-resident network interfaces. It is used at boot time to set up interfaces as necessary. After that, it is usually only needed when debugging, or when system tuning is needed.
+
+--------------------------------------------------
+NOTE : 
+ifconfig can only assign a static IP address to a network interface. If you want to assign a dynamic IP address using DHCP, use the dhclient command.
+---------------------------------------------------
+
+REFERENCES :
+- https://www.reddit.com/r/linuxquestions/comments/rvj03f/whats_wlp3s0_and_why_isnt_it_wlan0_anymore/
+
+- https://en.wikipedia.org/wiki/Consistent_Network_Device_Naming

@@ -1,0 +1,51 @@
+The ip command in linux is useful for sytem administrators and is a powerful tool for configuring network interfaces that any linux administrator should know. 
+It is used to bring interfaces up or down, assign and remove addresses and routes, manage ARP cache, and much more.
+
+ip command is seen replacing the ifconfig command and comes pre-installed in modern Linux distros.
+
+Syntax : 
+ip [ OPTIONS ] OBJECT { COMMAND | help }
+
+COMMANDS:
+
+1) Display information about all IP addresses :
+ip addr show 
+ip address
+ip addr
+
+2) Assign IP address to an interface :
+ip addr add ADDRESS dev IFNAME
+e.g.
+sudo ip address add 192.168.121.45/24 dev enp2s0 
+
+3) Assign multiple IP addresses to the same interface :
+sudo ip address add 192.168.121.241/24 dev eth0
+sudo ip address add 192.168.121.45/24 dev eth0
+
+4) Display information about network interfaces :
+ip link show 
+# Unlike 'ip addr show', 'ip link show' this will not print info about the IP addresses associated with the device.
+
+5) Alter the status of the interface UP/DOWN:
+ip link set dev {DEVICE} {up|down}
+
+6) Displaying and altering the routing table 
+''' 
+All network devices, whether they are hosts, routers, or other types of network nodes such as network attached printers, need to make decisions about where to route TCP/IP data packets. The routing table provides the configuration information required to make those decisions.
+'''
+ip route
+ip route list
+ip route list SELECTOR
+
+7) Add a new route:
+ip route add 192.168.121.0/24 via 192.168.121.1
+ip route add 192.168.121.0/24 dev <IFNAME>
+ip route add default via 192.168.121.1 dev eth0  // adds the default route
+
+8) Delete a route:
+'''
+To delete an entry from the routing table, use the route add command. The syntax for deleting a route is the same as when adding.
+'''
+ip route del <route>
+
+

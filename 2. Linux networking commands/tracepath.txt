@@ -1,0 +1,19 @@
+tracepath command in Linux is used to traces path to destination discovering MTU along this path.
+''' 
+MTU stands for Maximum Transmission Unit : it is the maximum size of the packet that can be transmitted from a network interface. All the devices including servers and switches/routers involved in communication should have the same MTU size.
+'''
+
+tracepath is similar to traceroute, but it does not require sudo privileges.
+
+SYNTAX:
+tracepath <IP Address | website>
+
+FLAGS:
+1)  Print IP addresses numerically:
+tracepath -n <IP Address | website>
+
+2) Both of host names and IP addresses:
+tracepath -b <IP Address | website>
+
+3) Set the initial destination port to use:
+tracepath -p 8080 <IP Address | website>

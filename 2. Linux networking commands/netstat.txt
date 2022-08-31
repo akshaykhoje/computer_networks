@@ -1,0 +1,36 @@
+NETSTAT - derived from NETwork and STATistics.
+
+Netstat is a command-line tool used by system administrators to evaluate network configuration and activity.
+
+It shows open ports on the host device and their corresponding addresses, the routing table, and masquerade connections.
+
+1) Display routing table:
+netstat -nr 
+
+2) Display interface statistics
+netstat -i 
+netstat -ai      // Display all of the kernel interfaces
+
+3) Display network connection:
+'''
+To view active or passive sockets, Netstat has a range of options. Active TCP, UDP, RAW, and Unix socket connections are specified by the –t, –u, –w, and –x options, respectively.
+'''
+netstat -ta 
+
+4) Display Network services:
+'''
+Run the following command to see a list of networks, their current states, and their associated ports.
+'''
+netstat -pnltu
+
+5) Display all TCP listening ports:
+netstat -lt
+
+6) Display all UDP listening ports:
+netstat -lu 
+
+7) Display all UNIX listening ports:
+netstat -lx 
+
+8) Show statistics:
+netstat -s 
