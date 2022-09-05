@@ -59,10 +59,7 @@ Class D :
 Class E : 
           Experimental and anything over 240.0.0.0
 ```       
-Classfull IP address haven't been used since they were replaced by CIDR in 1993.
-<<<<<<< HEAD
-
-'''
+Classful IP address haven't been used since they were replaced by CIDR in 1993.
 
 In short
 ```
