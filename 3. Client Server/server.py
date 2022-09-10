@@ -1,22 +1,5 @@
-# # Program for server side socket script
+# Program for server side socket script
 
-# import socket
-
-# # loopback interface address of the server (localhost in this case)
-# HOST = "127.0.0.1"
-# PORT = 2204           # port for listening (any non-privileged port > 1023)
-
-# with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-#     s.bind((HOST, PORT))
-#     s.listen()
-#     conn, addr = s.accept()        # maximum 1 client connection
-#     with conn:
-#         print(f"Connection with {addr} successful!")
-#         # bufsize = maximum amount of data that can be received
-#         while True:
-#           msg = input()
-#           conn.send(b'msg')
-          
 import socket
 
 
