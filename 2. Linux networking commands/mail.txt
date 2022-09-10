@@ -1,0 +1,2 @@
+Linux by default provides the feature of sending an email using the “mail” command through its terminal. We can write the subject, message along with the email address of the recipient and send it by just executing a single command. 
+

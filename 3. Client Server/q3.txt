@@ -1,0 +1,12 @@
+
+Build a simple client-server system, where you use the client to chat with a server. The protocol between the client and server is as follows.
+
+The server is first started on a known port.
+The client program is started (server IP and port are provided on the command line).
+The client connects to the server and then asks the user for input. The user types his message on the terminal. The user's inputis sent to the server via the connected socket.
+The server reads the user's input from the client socket. 
+The client then reads the reply from the server.
+The server must reply to the client.
+The client asks the user for the next message to send to the server.
+
+ 

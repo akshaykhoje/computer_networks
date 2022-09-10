@@ -1,0 +1,7 @@
+On Linux operating systems, the arp command manipulates or displays the kernel's IPv4 network neighbour cache. It can add entries to the table, delete one, or display the current content.
+
+ARP stands for Address Resolution Protocol, which is used to find the address of a network neighbor for a given IPv4 address.
+
+arp with no mode specifier prints the current content of the table. It is possible to limit the number of entries printed, by specifying a hardware address type, interface name or host address.
+
+arp -d address deletes an ARP table entry. Root privilege is required to do this. The entry is found by IP address. If a hostname is given, it will be resolved before looking up the entry in the ARP table.

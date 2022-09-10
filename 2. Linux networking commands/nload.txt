@@ -1,0 +1,3 @@
+nload is a console application which monitors network traffic and  bandwidth  usage in real time. It visualizes the in- and outgoing traffic using two graphs and provides additional info like the total amount of transferred data and min/max network usage.
+
+When running nload, you can switch between the devices (which you gave nload either on the command line or which were auto-detected) by pressing the left and right ar‐ row  keys. If the -m command line parameter is given, the arrow keys switch as many devices back and forth as there are shown on the screen. If you want to quit, do so by pressing 'q' or 'Ctrl+C'.

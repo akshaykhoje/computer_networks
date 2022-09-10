@@ -1,0 +1,7 @@
+On Unix-like operating systems, the dig command performs network DNS lookups.
+
+dig (which stands for domain information groper) is a flexible tool for interrogating DNS name servers. It performs DNS lookups and displays the answers that are returned from the name server(s) that were queried. Most DNS administrators use dig to troubleshoot DNS problems because of its flexibility, ease of use and clarity of output. Other lookup tools tend to have less functionality than dig.
+
+Although dig is normally used with command-line arguments, it also has a batch mode of operation for reading lookup requests from a file. A summary of its command-line arguments and options is printed when the -h option is given. Unlike earlier versions, the BIND 9 implementation of dig allows multiple lookups to be issued from the command line.
+
+  

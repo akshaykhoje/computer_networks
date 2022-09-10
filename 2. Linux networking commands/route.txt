@@ -1,0 +1,5 @@
+On Unix-like operating systems, the route command displays or modifies the IP routing table.
+
+In computer networking, a router is a device responsible for forwarding network traffic. When datagrams arrive at a router, the router must determine the best way to route them to their destination.
+
+On Linux, BSD, and other Unix-like systems, the route command is used to view and make changes to the kernel routing table. The command syntax is different on different systems; here, with specific command syntax, we'll be discussing the Linux version.

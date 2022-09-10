@@ -1,0 +1,1 @@
+In Linux, the telnet command is used to establish the connections between different machines.This command allows us to manage the remote devices using the CLI (command-line interface).  It uses TCP port 23 which is assigned to the telnet protocol.

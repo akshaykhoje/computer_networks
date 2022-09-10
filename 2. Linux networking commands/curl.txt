@@ -1,0 +1,9 @@
+curl is a command-line utility for transferring data from or to a server designed to work without user interaction. With curl, you can download or upload data using one of the supported protocols including HTTP, HTTPS, SCP, SFTP, IMAP, POP3 and FTP . curl provides a number of options allowing you to resume transfers, limit the bandwidth, proxy support, user authentication, and much more.
+
+If no protocol is specified, curl tries to guess the protocol you want to use, and it will default to HTTP.
+
+Download multiple files
+curl -O <url>
+
+Check if a website uses HTTP/2
+curl -I --http2 -s https://linuxize.com/ | grep HTTP

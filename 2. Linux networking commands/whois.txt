@@ -1,0 +1,19 @@
+A whois lookup will tell you a lot of information about who owns an internet domain.
+The whois system is a listing of records that contains details about both the ownership of domains and the owners. The Internet Corporation for Assigned Names and Numbers (ICANN) regulates domain name registration and ownership, but the list of records is held by many companies, known as registries.
+Anyone can query the list of records. When you do, one of the registries will handle your request and send you details from the appropriate whois record.
+
+
+Registry: A company that manages a list containing a set of domain names (there are many of these).
+Registrant: The legal owner of the domain; it’s registered to this person.
+Registrar: A registrant uses a registrar to make his or her registration.
+
+A whois record contains all the contact information associated with the person, company, or other entity that registered the domain name. Some registrations contain more information than others, and some registries return differing amounts of information.
+
+A typical whois record will contain the following information:
+
+    The name and contact information of the registrant: The owner of the domain.
+    The name and contact information of the registrar: The organization that registered the domain name.
+    The registration date.
+    When the information was last updated.
+    The expiration date.
+

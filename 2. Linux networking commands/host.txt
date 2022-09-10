@@ -1,0 +1,5 @@
+On Unix-like operating systems, the host command is a DNS lookup utility, finding the IP address of a domain name. It also performs reverse lookups, finding the domain name associated with an IP address.
+
+host performs DNS lookups, converting domain names to IP addresses and vice versa. When no arguments or options are given, host prints a summary of its command line arguments and options.
+
+host <url>

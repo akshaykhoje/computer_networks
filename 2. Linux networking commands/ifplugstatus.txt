@@ -1,0 +1,3 @@
+ifplugstatus - A link beat detection tool
+
+This command tells us whether a cable is plugged into our network interface or not.

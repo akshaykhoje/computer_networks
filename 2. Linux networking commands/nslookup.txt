@@ -1,0 +1,5 @@
+On Unix-like operating systems, the nslookup command queries Internet name servers interactively for information.
+
+nslookup, which stands for "name server lookup", finds information about a named domain.
+
+By default, nslookup translates a domain name to an IP address (or vice versa). For instance, to find the IP address of google.com, you could run the command:

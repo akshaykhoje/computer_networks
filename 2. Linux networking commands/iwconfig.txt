@@ -1,0 +1,2 @@
+iwconfig command in Linux is like ifconfig command, in the sense it works with kernel-resident network interface but it is dedicated to wireless networking interfaces only. It is used to set the parameters of the network interface that are particular to the wireless operation like SSID, frequency etc. iwconfig may also be used to display the parameters, and the wireless statistics which are extracted from /proc/net/wireless.
+
