@@ -47,5 +47,3 @@ ip route add default via 192.168.121.1 dev eth0  // adds the default route
 To delete an entry from the routing table, use the route add command. The syntax for deleting a route is the same as when adding.
 '''
 ip route del <route>
-
-
