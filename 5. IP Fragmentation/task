@@ -1,0 +1,5 @@
+Perform an assignment for IP-Fragmentation-Calculator
+
+To display the number of fragments needed for any given IP Data Packet size and MTU.
+
+To calculate the values of Total Length, MF Flag, Offset.
